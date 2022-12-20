@@ -1,0 +1,23 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.node.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["jest"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.json"],
+  "exclude": ["node_modules", "dist"],
+  "vueCompilerOptions": {
+    "experimentalCompatMode": 2,
+    "experimentalTemplateCompilerOptions": {
+      "compatConfig": { "MODE": 2 } // optional
+    }
+  }
+}
