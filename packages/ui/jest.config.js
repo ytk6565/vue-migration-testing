@@ -21,4 +21,5 @@ module.exports = {
   testEnvironmentOptions: {
     customExportConditions: ["node", "node-addons"],
   },
+  testPathIgnorePatterns: ["/node_modules/", "/dist/", ".cy.ts"],
 };

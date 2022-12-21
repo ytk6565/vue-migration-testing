@@ -12,13 +12,7 @@
     },
     "types": ["jest", "cypress"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.vue",
-    "src/**/*.json",
-    "cypress/**/*.ts",
-    "cypress/**/*.json"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.json", "cypress/cypress.d.ts"],
   "exclude": ["node_modules", "dist"],
   "vueCompilerOptions": {
     "experimentalCompatMode": 2,
