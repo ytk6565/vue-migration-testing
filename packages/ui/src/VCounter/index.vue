@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p>Times clicked: {{ count }}</p>
-    <button @click="increment">increment</button>
-    <button @click="decrement">decrement</button>
+    <p data-cy="counter">Times clicked: {{ count }}</p>
+    <button @click="increment" data-cy="increment">increment</button>
+    <button @click="decrement" data-cy="decrement">decrement</button>
   </div>
 </template>
 
