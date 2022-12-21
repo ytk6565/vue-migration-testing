@@ -17,4 +17,8 @@ module.exports = {
       : "@testing-library/vue",
   },
   testEnvironment: "jsdom",
+  // https://github.com/vuejs/vue-jest/issues/479#issuecomment-1295074840
+  testEnvironmentOptions: {
+    customExportConditions: ["node", "node-addons"],
+  },
 };

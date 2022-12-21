@@ -1,4 +1,3 @@
-// TODO: Vue 3 で実行時のエラーを修正する
 import { render, fireEvent } from "@testing-library/vue";
 import VCounter from "../index.vue";
 
