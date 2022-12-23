@@ -1,0 +1,7 @@
+{
+  "name": "@apps/vue2",
+  "version": "1.0.0",
+  "dependencies": {
+    "@packages/ui": "1.0.0"
+  }
+}
