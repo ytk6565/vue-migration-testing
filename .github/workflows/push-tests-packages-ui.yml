@@ -6,8 +6,7 @@ on:
       - main
     paths:
       - "packages/ui/**"
-      - .github/actions/setup-pnpm/action.yml
-      - .github/actions/setup-pnpm/install-dependencies.yml
+      - .github/actions/setup-node/action.yml
       - .github/workflows/push-tests-packages-ui.yml
       - "!**/README.md"
 
@@ -19,27 +18,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup PNPM
-        uses: ./.github/actions/setup-pnpm
-
-      - name: Install dependencies
-        uses: ./.github/actions/install-dependencies
+      - name: Setup Node.js
+        uses: ./.github/actions/setup-node
 
       - name: Unit test, Component Test (Vue2)
-        run: pnpm --filter @packages/ui test:2
+        run: npm -w @packages/ui test:2
 
       - name: Cypress Component Testing (Vue2)
-        run: pnpm --filter @packages/ui cy:run:2
+        run: npm -w @packages/ui cy:run:2
 
       - name: Build (Vue2)
-        run: pnpm --filter @packages/ui build:2
+        run: npm -w @packages/ui build:2
 
       - name: Unit test, Component Test (Vue3)
-        run: pnpm --filter @packages/ui test:3
+        run: npm -w @packages/ui test:3
 
       - name: Cypress Component Testing (Vue3)
-        run: pnpm --filter @packages/ui cy:run:3
-
+        run: npm -w @packages/ui cy:run:3
 
       - name: Build (Vue3)
-        run: pnpm --filter @packages/ui build:3
+        run: npm -w @packages/ui build:3
