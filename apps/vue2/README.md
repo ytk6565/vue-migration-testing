@@ -1,19 +1,9 @@
-# hello
+# Vue 2 app
 
-## Project setup
-```
-npm install
-```
+```bash
+# Dev
+$ npm run dev:vue2
 
-### Compiles and hot-reloads for development
+# Build
+$ npm run build:vue2
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
