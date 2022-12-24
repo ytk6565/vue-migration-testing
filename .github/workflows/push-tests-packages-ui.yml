@@ -21,20 +21,20 @@ jobs:
       - name: Setup Node.js
         uses: ./.github/actions/setup-node
 
-      - name: Unit test, Component Test (Vue2)
+      - name: (Vue2) Unit test, Component Test
         run: npm -w @packages/ui run test:2
 
-      - name: Cypress Component Testing (Vue2)
+      - name: (Vue2) Cypress Component Testing
         run: npm -w @packages/ui run cy:run:2
 
-      - name: Build (Vue2)
+      - name: (Vue2) Build
         run: npm -w @packages/ui run build:2
 
-      - name: Unit test, Component Test (Vue3)
+      - name: (Vue3) Unit test, Component Test
         run: npm -w @packages/ui run test:3
 
-      - name: Cypress Component Testing (Vue3)
+      - name: (Vue3) Cypress Component Testing
         run: npm -w @packages/ui run cy:run:3
 
-      - name: Build (Vue3)
+      - name: (Vue3) Build
         run: npm -w @packages/ui run build:3
