@@ -1,0 +1,43 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "@apps/vue2#dev": {
+      "dependsOn": ["@packages/ui#setup:2","@packages/ui#build:2"],
+      "outputs": []
+    },
+    "@apps/vue3#dev": {
+      "dependsOn": ["@packages/ui#setup:3","@packages/ui#build:3"],
+      "outputs": []
+    },
+    "@apps/vue2#build": {
+      "dependsOn": ["@packages/ui#setup:2","@packages/ui#build:2"],
+      "outputs": []
+    },
+    "@apps/vue3#build": {
+      "dependsOn": ["@packages/ui#setup:3","@packages/ui#build:3"],
+      "outputs": []
+    },
+    "setup:2": {
+      "outputs": [],
+      "cache": false
+    },
+    "setup:3": {
+      "outputs": [],
+      "cache": false
+    },
+    "dev:2": {
+      "outputs": [],
+      "cache": false
+    },
+    "dev:3": {
+      "outputs": [],
+      "cache": false
+    },
+    "build:2": {
+      "outputs": ["dist/**"]
+    },
+    "build:3": {
+      "outputs": ["dist/**"]
+    }
+  }
+}

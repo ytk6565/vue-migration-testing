@@ -16,12 +16,14 @@
     "cy:open": "cypress run --component --browser chrome",
     "cy:open:2": "VUE_VERSION=2 run-s setup:2 cy:open",
     "cy:open:3": "VUE_VERSION=3 run-s setup:3 cy:open",
-    "build": "vite build && vue-tsc -p tsconfig.build.json",
-    "build:2": "VUE_VERSION=2 run-s setup:2 build",
-    "build:3": "VUE_VERSION=3 run-s setup:3 build"
-  },
-  "dependencies": {
-    "vue-demi": "0.13.11"
+    "clean": "rimraf dist",
+    "types": "vue-tsc -p tsconfig.build.json",
+    "build": "vite build",
+    "build:2": "VUE_VERSION=2 run-s setup:2 clean build types",
+    "build:3": "VUE_VERSION=3 run-s setup:3 clean build types",
+    "dev": "run-p \"build -- --watch\" \"types -- --watch\"",
+    "dev:2": "VUE_VERSION=2 run-s setup:2 clean dev",
+    "dev:3": "VUE_VERSION=3 run-s setup:3 clean dev"
   },
   "devDependencies": {
     "@jest/globals": "29.3.1",
@@ -39,6 +41,7 @@
     "jest": "29.3.1",
     "jest-environment-jsdom": "29.3.1",
     "npm-run-all": "4.1.5",
+    "rimraf": "3.0.2",
     "ts-jest": "29.0.3",
     "typescript": "4.9.4",
     "vite": "3.2.5",

@@ -19,6 +19,7 @@ const config: UserConfig = {
   ],
   build: {
     sourcemap: true,
+    emptyOutDir: false,
     lib: {
       fileName: "main",
       formats: ["es"],

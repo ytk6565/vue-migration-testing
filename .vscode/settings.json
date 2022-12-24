@@ -1,0 +1,6 @@
+{
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "files.associations": {
+    "turbo.json": "json5"
+  }
+}

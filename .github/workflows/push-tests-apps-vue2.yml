@@ -1,0 +1,25 @@
+name: "Apps Vue2 Tests"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/vue2/**"
+      - .github/actions/setup-node/action.yml
+      - .github/workflows/push-tests-apps-vue2.yml
+      - "!**/README.md"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: ./.github/actions/setup-node
+
+      - name: (Vue2) Build
+        run: npm run build:2
