@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": true
+  },
+  "exclude": [
+    "**/__tests__/**",
+    "**/__mocks__/**",
+    "**/*.test.ts",
+    "**/*.cy.ts",
+    "**/*.spec.ts"
+  ]
+}

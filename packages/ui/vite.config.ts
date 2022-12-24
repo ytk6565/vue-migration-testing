@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import { UserConfig } from "vite";
 import { createVuePlugin } from "vite-plugin-vue2";
 import pluginVue3 from "@vitejs/plugin-vue";
@@ -16,6 +17,23 @@ const config: UserConfig = {
       ? [pluginVue3({ compiler: compilerVue3 })]
       : [createVuePlugin()]),
   ],
+  build: {
+    sourcemap: true,
+    lib: {
+      fileName: "main",
+      formats: ["es"],
+      entry: resolve(__dirname, "src/main.ts"),
+    },
+    rollupOptions: {
+      external: ["vue", "vue-demi"],
+      output: {
+        globals: {
+          vue: "Vue",
+          "vue-demi": "VueDemi",
+        },
+      },
+    },
+  },
 };
 
 export default config;

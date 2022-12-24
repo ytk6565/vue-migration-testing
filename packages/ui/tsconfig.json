@@ -13,11 +13,5 @@
     "types": ["jest", "cypress"]
   },
   "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.json"],
-  "exclude": ["node_modules", "dist"],
-  "vueCompilerOptions": {
-    "experimentalCompatMode": 2,
-    "experimentalTemplateCompilerOptions": {
-      "compatConfig": { "MODE": 2 } // optional
-    }
-  }
+  "exclude": ["node_modules", "dist"]
 }
