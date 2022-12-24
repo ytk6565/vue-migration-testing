@@ -1,8 +1,4 @@
 {
   "name": "vue-migration-testing",
-  "version": "1.0.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "version": "1.0.0"
 }
