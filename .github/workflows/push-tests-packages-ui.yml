@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - "packages/ui/**"
+      - .github/actions/setup-pnpm/action.yml
+      - .github/actions/setup-pnpm/install-dependencies.yml
       - .github/workflows/push-tests-packages-ui.yml
       - "!**/README.md"
 
