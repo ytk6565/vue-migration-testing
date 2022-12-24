@@ -31,14 +31,15 @@ jobs:
       - name: Cypress Component Testing (Vue2)
         run: pnpm --filter @packages/ui cy:run:2
 
+      - name: Build (Vue2)
+        run: pnpm --filter @packages/ui build:2
+
       - name: Unit test, Component Test (Vue3)
         run: pnpm --filter @packages/ui test:3
 
       - name: Cypress Component Testing (Vue3)
         run: pnpm --filter @packages/ui cy:run:3
 
-      - name: Build (Vue2)
-        run: pnpm --filter @packages/ui build:2
 
       - name: Build (Vue3)
         run: pnpm --filter @packages/ui build:3
