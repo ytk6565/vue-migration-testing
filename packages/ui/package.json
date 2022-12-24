@@ -1,6 +1,9 @@
 {
   "name": "@packages/ui",
   "version": "1.0.0",
+  "main": "dist/main.mjs",
+  "module": "dist/main.mjs",
+  "types": "dist/main.d.ts",
   "scripts": {
     "setup:2": "vue-demi-switch 2",
     "setup:3": "vue-demi-switch 3 vue3",
