@@ -11,5 +11,13 @@
     "**/*.test.ts",
     "**/*.cy.ts",
     "**/*.spec.ts"
-  ]
+  ],
+  "tsc-alias": {
+    "replacers": {
+      "vue3Replacer": {
+        "enabled": true,
+        "file": "./vue3Replacer.cjs",
+      }
+    }
+  }
 }
