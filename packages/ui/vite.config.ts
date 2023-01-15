@@ -10,6 +10,7 @@ const config: UserConfig = {
   resolve: {
     alias: {
       ...(isVue3 ? { vue: "vue3" } : {}),
+      "@": resolve(__dirname, "src"),
     },
   },
   plugins: [
