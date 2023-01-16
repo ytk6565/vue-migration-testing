@@ -1,3 +1,6 @@
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+const { compilerOptions } = require('./tsconfig');
+
 const isVue3 = process.env.VUE_VERSION === "3";
 
 /**
@@ -11,6 +14,7 @@ module.exports = {
   },
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
     "^vue$": isVue3 ? "vue3" : "vue",
     "^@testing-library/vue$": isVue3
       ? "@testing-library/vue3"
